@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:id="@+id/LinearLayout"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:background="#075e54"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="200dp"
+            android:drawablePadding="200dp"
+            android:text="WhatsApp"
+            android:textColor="@color/white"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="5dp"
+            android:drawableRight="@drawable/search"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="8dp"
+            android:drawableRight="@drawable/ic_baseline_more_vert_24"
+            />
+
+    </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#075e54"
+            android:id="@+id/navbar"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/fragmentsnames"
+            android:layout_below="@id/LinearLayout"
+            />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/fragmentlayout"
+        android:layout_height="match_parent"
+        android:layout_below="@id/navbar"/>
+    </RelativeLayout>
